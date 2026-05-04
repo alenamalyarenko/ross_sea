@@ -1,0 +1,24 @@
+# ===================================
+# | Parameters for ICEFRONT package |
+# ===================================
+ &ICEFRONT_PARM01
+#     &     rhoIcefront, ICEFRONTkappa,
+#     &     ICEFRONTlatentHeat, ICEFRONTHeatCapacity_Cp,
+#     &     ICEFRONTthetaSurface,
+#     &     applyIcefrontTendT,applyIcefrontTendS,
+#     &     ICEFRONTdepthFile, ICEFRONTlengthFile 
+
+ ICEFRONTdepthFile='icefront_depth_10c_smoothed5.ross',
+ ICEFRONTlengthFile='icefront_length_10c_smoothed5.ross',
+ applyIcefrontTendT = .TRUE.,
+ applyIcefrontTendS = .TRUE.,
+&
+ 
+ &ICEFRONT_EXF_PARM02
+#  SGRunOffstartdate1 = 19920101,
+#  SGRunOffstartdate2 = 000000,
+#  SGRunOffperiod     = -12.,
+#  SGRunOffconst      = 0.,
+#  SGRunOff_inscal    = 1.,
+#  SGRunOffFile       = 'subglacial_runoff.150',
+&

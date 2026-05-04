@@ -1,0 +1,17 @@
+# ===================================
+# | Parameters for SHELFICE package |
+# ===================================
+ &SHELFICE_PARM01
+ SHELFICEwriteState = .FALSE., 
+ SHELFICEtopoFile='icetopo_10c_smoothed5.ross',
+ SHELFICEloadAnomalyFile = 'phi0surf_10c_smoothed5.ross.jmd95z',
+ SHELFICEconserve = .TRUE.,
+ no_slip_shelfice = .false.,
+ SHELFICEboundaryLayer = .TRUE.,
+ SHELFICEuseGammaFrict = .TRUE.,
+# Will be needed for remeshing
+# SHI_withBL_realFWflux=.FALSE.,
+# SHI_withBL_uStarTopDz=.FALSE.,
+# Davis Nicholls 2019
+ shiCdrag          = 0.0097,
+ &

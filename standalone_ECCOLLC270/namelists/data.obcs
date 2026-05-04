@@ -1,0 +1,81 @@
+#
+# ***************
+# Open boundaries
+# ***************
+ &OBCS_PARM01
+ OB_Jnorth= 210*-1,
+ OB_Jsouth= 210*0,
+ OB_Iwest=  240*1,
+ OB_Ieast=  240*-1,
+#
+ useOrlanskiNorth=.FALSE.,
+ useOBCSsponge=.TRUE.,
+ useOBCSbalance=.TRUE.,
+ useOBCSprescribe=.TRUE.,
+ useOBCStides = .TRUE.
+#
+ tidalPeriod  = 44714.16,43200.,45569.88,43081.92,
+                86164.2,92949.48,86637.24,96726.24,
+                1180295.64,2380716.,
+ OBNamFile=  'OBNam.pst_64.v',
+ OBNamtFile= 'OBNam.pst_64.u',
+ OBNphFile=  'OBNph.pst_64.v',
+ OBNphtFile= 'OBNph.pst_64.u',
+ 
+ OBEamtFile= 'OBEam.pst_64.v',
+ OBEamFile=  'OBEam.pst_64.u',
+ OBEphtFile= 'OBEph.pst_64.v',
+ OBEphFile=  'OBEph.pst_64.u',
+ 
+ OBWamtFile= 'OBWam.pst_64.v',
+ OBWamFile=  'OBWam.pst_64.u',
+ OBWphtFile= 'OBWph.pst_64.v',
+ OBWphFile=  'OBWph.pst_64.u',
+#
+ OBNsFile='OB_N_s_eccoV5_coupled_92_18_64.bin',
+ OBNtFile='OB_N_t_eccoV5_coupled_92_18_64.bin',
+ OBNuFile='OB_N_u_eccoV5_coupled_92_18_64_rotated.bin',
+ OBNvFile='OB_N_v_eccoV5_coupled_92_18_64_rotated.bin',
+ OBEsFile='OB_E_s_eccoV5_coupled_92_18_64.bin',
+ OBEtFile='OB_E_t_eccoV5_coupled_92_18_64.bin',
+ OBEuFile='OB_E_u_eccoV5_coupled_92_18_64_rotated.bin',
+ OBEvFile='OB_E_v_eccoV5_coupled_92_18_64_rotated.bin',
+ OBWsFile='OB_W_s_eccoV5_coupled_92_18_64.bin',
+ OBWtFile='OB_W_t_eccoV5_coupled_92_18_64.bin',
+ OBWuFile='OB_W_u_eccoV5_coupled_92_18_64_rotated.bin',
+ OBWvFile='OB_W_v_eccoV5_coupled_92_18_64_rotated.bin',
+#
+ OBNaFile=      'OB_N_a_eccoV5_coupled_92_18_64.bin',
+ OBNhFile=      'OB_N_h_eccoV5_coupled_92_18_64.bin',
+ OBNsnFile=    'OB_N_sh_eccoV5_coupled_92_18_64.bin',
+ OBNuiceFile='OB_N_uice_eccoV5_coupled_92_18_64_rotated.bin', 
+ OBNviceFile='OB_N_vice_eccoV5_coupled_92_18_64_rotated.bin', 
+ OBEaFile=      'OB_E_a_eccoV5_coupled_92_18_64.bin',
+ OBEhFile=      'OB_E_h_eccoV5_coupled_92_18_64.bin',
+ OBEsnFile=    'OB_E_sh_eccoV5_coupled_92_18_64.bin',
+ OBEuiceFile='OB_E_uice_eccoV5_coupled_92_18_64_rotated.bin', 
+ OBEviceFile='OB_E_vice_eccoV5_coupled_92_18_64_rotated.bin',  
+ OBWaFile=      'OB_W_a_eccoV5_coupled_92_18_64.bin',
+ OBWhFile=      'OB_W_h_eccoV5_coupled_92_18_64.bin',
+ OBWsnFile=    'OB_W_sh_eccoV5_coupled_92_18_64.bin',
+ OBWuiceFile='OB_W_uice_eccoV5_coupled_92_18_64_rotated.bin', 
+ OBWviceFile='OB_W_vice_eccoV5_coupled_92_18_64_rotated.bin',  
+# 
+ &
+# *****************************************
+# Orlanski Boundary Condition Parameters.
+# *****************************************
+ &OBCS_PARM02
+# cvelTimeScale = 2000.,
+ &
+# *****************************************
+# Sponge Layer Parameters.
+# *****************************************
+ &OBCS_PARM03
+ Urelaxobcsinner=864000.E0,
+ Urelaxobcsbound=43200.E0,
+ Vrelaxobcsinner=864000.E0,
+ Vrelaxobcsbound=43200.E0,
+ spongeThickness=5,
+ &
+

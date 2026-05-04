@@ -1,0 +1,160 @@
+# $Header: /u/gcmpack/MITgcm/verification/lab_sea/input/data.exf,v 1.7 2004/07/11 06:21:44 dimitri Exp $
+#
+# *********************
+# External Forcing Data
+# *********************
+# ERA5, 0.25deg,0-360,-90-0, 6-hourly fluxes by me, 1-hourly Wind, real8
+# ECCOV5, monthly, 1992 start
+
+
+ &EXF_NML_01
+ useExfYearlyFields = .TRUE., 
+ useExfCheckRange   = .FALSE.,
+ exf_iprec          = 64,
+ exf_yftype         = 'RL',
+# 
+ useAtmWind        = .TRUE.,
+#  
+# TO COMBINE WITH ALLOW_ZENITH_ANGLE:
+ exf_albedo        = 0.1,
+ useExfZenIncoming = .TRUE., 
+ select_ZenAlbedo  = 1,
+#
+ ocean_emissivity = 0.97,
+ ice_emissivity   = 0.95,
+ snow_emissivity  = 0.95,
+# 
+ exf_scal_BulkCdn=1.,
+
+#
+ exf_iprec         = 64,
+ exf_yftype        = 'RL',
+  
+ &
+#
+ &EXF_NML_02
+ atempfile         = 'ERA5_t2m',
+ aqhfile           = 'ERA5_aqh',
+ precipfile        = 'ERA5_tp',
+ uwindfile         = 'ERA5_u10',
+ vwindfile         = 'ERA5_v10',
+ swdownfile        = 'ERA5_sw',
+ lwdownfile        = 'ERA5_lw',
+#
+ atempstartdate1   = 19920101,
+ atempstartdate2   = 000000,
+ atempperiod       = 21600.0,
+#
+ aqhstartdate1     = 19920101,
+ aqhstartdate2     = 000000,
+ aqhperiod         = 21600.0,
+ precipstartdate1  = 19920101,
+ precipstartdate2  = 000000,
+ precipperiod      = 21600.0,
+#
+ swdownstartdate1  = 19920101,
+ swdownstartdate2  = 000000,
+ swdownperiod      = 21600.0,
+#
+ lwdownstartdate1  = 19920101,
+ lwdownstartdate2  = 000000,
+ lwdownperiod      = 21600.0,
+#
+ uwindstartdate1   = 19920101,
+ uwindstartdate2   = 000000,
+ uwindperiod       = 3600.0,
+#
+ vwindstartdate1   = 19920101,
+ vwindstartdate2   = 000000,
+ vwindperiod       = 3600.0,  
+ &
+ &EXF_NML_03
+ &
+#
+ &EXF_NML_04
+#
+ atemp_lon0       =   0.0D0,
+ atemp_lon_inc    =   0.25D0,
+ atemp_lat0       = -89.75D0,
+ atemp_lat_inc    = 359*0.25,
+ atemp_nlon       = 1440,
+ atemp_nlat       = 360,
+#
+ aqh_lon0        =   0.0D0,
+ aqh_lon_inc     =    0.25D0,
+ aqh_lat0        = -89.75D0,
+ aqh_lat_inc     = 359*0.25,
+ aqh_nlon        = 1440,
+ aqh_nlat        = 360,
+#
+ precip_lon0      =  0.0D0,
+ precip_lon_inc   =   0.25D0,
+ precip_lat0      = -89.75D0,
+ precip_lat_inc   =359*0.25,
+ precip_nlon      = 1440,
+ precip_nlat      = 360,
+#
+ uwind_lon0       =   0.0D0,
+ uwind_lon_inc    =   0.25D0,
+ uwind_lat0       = -89.75D0,
+ uwind_lat_inc    = 359*0.25,
+ uwind_nlon       = 1440,
+ uwind_nlat       = 360,
+#
+ vwind_lon0       =   0.0D0,
+ vwind_lon_inc    =   0.25D0,
+ vwind_lat0       = -89.75D0,
+ vwind_lat_inc    = 359*0.25,
+ vwind_nlon       = 1440,
+ vwind_nlat       = 360,
+#
+ swdown_lon0      =   0.0D0,
+ swdown_lon_inc   =   0.25D0,
+ swdown_lat0      = -89.75D0,
+ swdown_lat_inc   = 359*0.25,
+ swdown_nlon      = 1440,
+ swdown_nlat      = 360,
+#
+ lwdown_lon0      =  0.0D0,
+ lwdown_lon_inc   =   0.25D0,
+ lwdown_lat0      = -89.75D0,
+ lwdown_lat_inc   = 359*0.25,
+ lwdown_nlon      = 1440,
+ lwdown_nlat      = 360,
+#
+ &
+#
+ &EXF_NML_OBCS
+ obcsNstartdate1   = 19920115,
+ obcsNstartdate2   = 000000,
+ obcsNperiod       = 2629800.,
+#
+ obcsSstartdate1   = 19920115,
+ obcsSstartdate2   = 000000,
+ obcsSperiod       = 2629800.,
+#
+ obcsEstartdate1   = 19920115,
+ obcsEstartdate2   = 000000,
+ obcsEperiod       = 2629800.,
+#
+ obcsWstartdate1   = 19920115,
+ obcsWstartdate2   = 000000,
+ obcsWperiod       = 2629800.,
+#
+ siobNstartdate1   = 19920115,
+ siobNstartdate2   = 000000,
+ siobNperiod       = 2629800.,
+#
+ siobSstartdate1   = 19920115,
+ siobSstartdate2   = 000000,
+ siobSperiod       = 2629800.,
+#
+ siobEstartdate1   = 19920115,
+ siobEstartdate2   = 000000,
+ siobEperiod       = 2629800.,
+#
+ siobWstartdate1   = 19920115,
+ siobWstartdate2   = 000000,
+ siobWperiod       = 2629800.,
+#
+ &

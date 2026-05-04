@@ -1,0 +1,170 @@
+# $Header: /u/gcmpack/MITgcm/verification/lab_sea/input/data.exf,v 1.7 2004/07/11 06:21:44 dimitri Exp $
+#
+# *********************
+# External Forcing Data
+# *********************
+# ACCESS ESM 1.5  
+ &EXF_NML_01
+ useExfYearlyFields = .TRUE., 
+ useExfCheckRange   = .FALSE.,
+ exf_iprec          = 64,
+ exf_yftype         = 'RL',
+ diags_opOceWeighted= .FALSE.,
+ useAtmWind        = .TRUE.,
+#  
+# TO COMBINE WITH ALLOW_ZENITH_ANGLE:
+ exf_albedo        = 0.1,
+ useExfZenIncoming = .TRUE., 
+ select_ZenAlbedo  = 1,
+#
+ ocean_emissivity = 0.97,
+ ice_emissivity   = 0.95,
+ snow_emissivity  = 0.95,
+# 
+ exf_scal_BulkCdn=1.,
+
+ &
+#
+ &EXF_NML_02
+#
+ atempstartdate1   = 20750101,
+ atempstartdate2   = 00000,
+ atempperiod       = 21600.0,
+#
+ aqhstartdate1     = 20750101,
+ aqhstartdate2     = 00000,
+ aqhperiod         = 86400.0,
+#
+ precipstartdate1  = 20750101,
+ precipstartdate2  = 00000,
+ precipperiod      = 86400.0,
+#
+ uwindstartdate1   = 20750101,
+ uwindstartdate2   = 00000,
+ uwindperiod       = 21600.0,
+#
+ vwindstartdate1   = 20750101,
+ vwindstartdate2   = 00000,
+ vwindperiod       = 21600.0,
+#
+# runoffstartdate1 = 20750101,
+# runoffstartdate2 = 060000, 
+# runoffperiod = -12,
+#   
+ swdownstartdate1  = 20750101,
+ swdownstartdate2  = 00000,
+ swdownperiod      = 86400.0,
+#
+ lwdownstartdate1  = 20750101,
+ lwdownstartdate2  = 00000,
+ lwdownperiod      = 86400.0,
+#
+#
+ atempfile         = 'ACCESS-ESM_t2m',
+ aqhfile           = 'ACCESS-ESM_huss',
+ precipfile        = 'ACCESS-ESM_tp',
+ uwindfile         = 'ACCESS-ESM_u10',
+ vwindfile         = 'ACCESS-ESM_v10',
+ swdownfile        = 'ACCESS-ESM_sw',
+ lwdownfile        = 'ACCESS-ESM_lw',
+# runofffile = 'run-off-64.bin_1x1',
+#
+ &
+ &EXF_NML_03
+# access in kg/m2/s -> :1000kg/m3 (density) to make ot m/s
+ exf_inscal_precip=0.001,
+ &
+#
+ &EXF_NML_04
+# 
+ atemp_lon0        =   0.0D0,
+ atemp_lon_inc     =   1.875D0,
+ atemp_lat0        = -90.00D0,
+ atemp_lat_inc     = 144*1.25,
+ atemp_nlon        = 192,
+ atemp_nlat        = 145,
+#
+ aqh_lon0        =   0.0D0,
+ aqh_lon_inc     =   1.875D0,
+ aqh_lat0        = -90.00D0,
+ aqh_lat_inc     = 144*1.25,
+ aqh_nlon        = 192,
+ aqh_nlat        = 145,
+#
+ precip_lon0        =  0.0D0
+ precip_lon_inc     =  1.875D0,
+ precip_lat0        = -90.00D0,
+ precip_lat_inc     =144*1.25,
+ precip_nlon        = 192,
+ precip_nlat        = 145,
+#
+ uwind_lon0        =   0.0D0
+ uwind_lon_inc     =   1.875D0,
+ uwind_lat0        = -90.00D0,
+ uwind_lat_inc     = 144*1.25,
+ uwind_nlon        = 192,
+ uwind_nlat        = 145,
+#
+ vwind_lon0        =   0.0D0
+ vwind_lon_inc     =   1.875D0,
+ vwind_lat0        = -90.00D0,
+ vwind_lat_inc     = 144*1.25,
+ vwind_nlon        = 192,
+ vwind_nlat        = 145,
+#
+ swdown_lon0        =   0.0D0
+ swdown_lon_inc     =   1.875D0,
+ swdown_lat0        = -90.00D0,
+ swdown_lat_inc     = 144*1.25,
+ swdown_nlon        = 192,
+ swdown_nlat        = 145,
+#
+ lwdown_lon0        =  0.0D0
+ lwdown_lon_inc     =  1.875D0,
+ lwdown_lat0        = -90.00D0,
+ lwdown_lat_inc     = 144*1.25,
+ lwdown_nlon        = 192,
+ lwdown_nlat        = 145,
+#
+# runoff_lon0        = 0.50D0,
+# runoff_lon_inc     = 1.0D0,
+# runoff_lat0        = -79.5D0,
+# runoff_lat_inc     = 160*1.0D0,
+# runoff_nlon        = 360,
+# runoff_nlat        = 160,
+#
+ &
+#
+ &EXF_NML_OBCS
+ obcsNstartdate1   = 20750115,
+ obcsNstartdate2   = 000000,
+ obcsNperiod       = 2629800.,
+#
+ obcsSstartdate1   = 20750115,
+ obcsSstartdate2   = 000000,
+ obcsSperiod       = 2629800.,
+#
+ obcsEstartdate1   = 20750115,
+ obcsEstartdate2   = 000000,
+ obcsEperiod       = 2629800.,
+#
+ obcsWstartdate1   = 20750115,
+ obcsWstartdate2   = 000000,
+ obcsWperiod       = 2629800.,
+#
+ siobNstartdate1   = 20750115,
+ siobNstartdate2   = 000000,
+ siobNperiod       = 2629800.,
+#
+ siobSstartdate1   = 20750115,
+ siobSstartdate2   = 000000,
+ siobSperiod       = 2629800.,
+#
+ siobEstartdate1   = 20750115,
+ siobEstartdate2   = 000000,
+ siobEperiod       = 2629800.,
+#
+ siobWstartdate1   = 20750115,
+ siobWstartdate2   = 000000,
+ siobWperiod       = 2629800., 
+&

@@ -1,0 +1,131 @@
+ &diagnostics_list
+   dumpatlast = .TRUE., 
+
+   filename(1)  = 'surfDiag2d',
+   frequency(1) = 2629800.,
+   timePhase(1)=  2629800.,
+
+   fileName(2)  = 'dynDiag3d',
+   frequency(2) = 2629800.,
+   timePhase(2) = 2629800.,
+  
+   fileName(3)  = 'stateICE',
+   frequency(3) = 2629800.,
+   timePhase(3) = 2629800., 
+
+   filename(4)  = 'diag_airsea',
+   frequency(4) = 2629800.,
+   timePhase(4) = 2629800., 
+    
+
+################################
+   fields(1,1) =  'TFLUX   ', !1
+                  'SFLUX   ', !2                
+                  'KPPhbl  ', !3
+                  'KPPfrac ', !4
+                  'MXLDEPTH', !5
+# ShelfIce
+                  'SHIuStar', !6
+                  'SHIgammT', !7
+                  'SHIgammS', !8
+                  'SHIfwFlx', !9
+                  'SHIhtFlx', !10
+                  'SHIForcT', !11
+                  'SHIForcS', !12 
+
+################################
+   fields(1,2)  = 'SALT    ', !1
+                  'THETA   ', !2
+                  'UVEL    ', !3
+                  'VVEL    ', !4
+                  'WVEL    ', !5
+# KPP                         
+                  'KPPdiffS', !6
+                  'KPPdiffT', !7
+                  'KPPghatK', !8
+                  'KPPviscA', !9
+
+################################
+    fields(1,3) = 'SIarea  ', !1
+                  'SIheff  ', !2
+                  'SIhsnow ', !3
+                  'SIuice  ', !4
+                  'SIvice  ', !5
+!                                       
+                  'SIswnet ', !6
+                  'SIlwnet ', !7
+                  'SIsh    ', !8
+                  'SIlh    ', !9
+
+! increase with seaice_drag                   
+                  'SItaux  ', !10
+                  'SItauy  ', !11
+                  'SIatmTx ', !12
+                  'SIatmTy ', !13
+!                  
+                  'SIqsw   ', !14
+                  'SIqnet  ', !15
+                  'SIqneto ', !16
+                  'SIqneti ', !17
+                  'SIempmr ', !18
+!                  
+                  'SIaQbOCN', !19
+                  'SIaQbATC', !20
+                  'SIaQbATO', !21
+!                  
+                  'SIdHbOCN', !22
+                  'SIdHbATC', !23
+                  'SIdHbATO', !24
+                  'SIdHbFLO', !25
+!                  
+                  'SIdAbATO', !26
+                  'SIdAbATC', !27
+                  'SIdAbOCN', !28
+!
+!                  'SIheffST', 
+                  'SIheffPA', !29
+                  'SIheffRi', !30            
+                  'SIheffPT', !31
+                  'SIheffTh', !32
+                  'SIheffEN', !33                 
+
+!                 
+!                  'SIsnowST', 
+                  'SIsnowPA', !34
+                  'SIsnowRi', !35                
+                  'SIhsnoPT', !36
+                  'SIsnowTh', !37
+                  'SIsnowEN', !38                                 
+!
+!                  'SIareaST', 
+                  'SIareaPA', !39
+                  'SIareaRi', !40
+                  'SIareaPT', !41
+                  'SIareaTh', !42
+                  'SIareaEN', !43
+!                  
+                  'SIdA',     !44             
+                  
+################################ 
+    fields(1,4) = 'EXFhs   ', !1
+                  'EXFhl   ', !2
+                  'EXFlwnet', !3
+                  'EXFswnet', !4
+                  'EXFqnet ', !5                
+                  'EXFpreci', !6
+                  'EXFevap ', !7
+!                  'EXFroff ', !8
+!                  'EXFland ', !9
+                  'EXFatemp', !10
+                  'EXFtaux ', !11
+                  'EXFtauy ', !12
+# diags_oceanic_surf_flux.F                  
+                  'oceTAUY ', !13
+                  'oceTAUX ', !14
+                  'surForcT', !15
+                  'surForcS', !16
+   
+################################
+ /
+ &DIAG_STATIS_PARMS
+ /

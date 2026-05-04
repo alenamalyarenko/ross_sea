@@ -1,0 +1,114 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+# Tref=70*-1,
+# Sref=70*34.5,  
+#  viscAh=1.E1,
+#  viscAhGrid=1.E-1,
+ viscA4=1.E8,
+ diffK4T=1.E8,
+ diffK4S=1.E8,
+ viscAz= 1.e-05,
+ no_slip_sides = .FALSE.,
+ no_slip_bottom = .FALSE.,
+ diffKzT=1.e-5,
+ diffKzS=1.e-5,
+ beta=1.E-11,
+ tAlpha=2.E-4,
+ sBeta =7.4E-4,
+ viscC4Leith=2.0,
+ viscC4Leithd=2.0,
+ viscA4GridMax=1.0,
+ useAreaViscLength=.TRUE.,
+ highOrderVorticity  = .TRUE.,
+ bottomDragQuadratic = 0.002,
+#CMM ##########
+ beta=1.E-11,
+ tAlpha=2.E-4,
+ sBeta =7.4E-4,
+ rhonil=1035.,
+ rhoConstFresh=1000.,
+ gravity=9.81,
+ eosType = 'JMD95Z',
+#when using ggl90
+# ivdc_kappa=10.,
+#
+ implicitDiffusion=.true.,
+ implicitViscosity=.true.,
+ implicitFreeSurface=.true.,
+ convertFW2Salt = -1.,
+ useRealFreshWaterFlux=.FALSE.,
+ useCDscheme=.FALSE.,
+ useSingleCpuIO=.TRUE.,
+ vectorInvariantMomentum=.TRUE.,
+ staggerTimeStep=.TRUE.,
+ multiDimAdvection=.TRUE.,
+ tempAdvScheme=33,
+ saltAdvScheme=33,
+#CMM(
+ tempVertAdvScheme=3,
+ saltVertAdvScheme=3,
+ tempImplVertAdv=.TRUE.,
+ saltImplVertAdv=.TRUE.,
+#CMM)
+ useNHMTerms=.FALSE.,
+# turn on lopped cells
+ hFacMin=0.3,
+ hFacMindz=50.,
+# set precision of data files
+ readBinaryPrec=64,
+ writeBinaryPrec=64,
+ globalfiles=.TRUE.,
+ rotationPeriod=86164.,
+ debugLevel=0,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters = 300,
+ cg2dTargetResidual=1.E-10,
+ &
+
+# Time stepping parameters
+ &PARM03
+ startTime         = 0.,
+# endTime           = 2952000.,
+ endTime           = 86400.,
+ deltaTmom         = 60.,
+ deltaTtracer      = 60.,
+ deltaTClock       = 60.,
+ abEps             = 0.1,
+ chkptFreq         = 10800.,
+ pChkptFreq        = 10800., 
+ dumpFreq          = 60.,
+ taveFreq          = 10800.,
+ tauThetaClimRelax = 0.,
+ tauSaltClimRelax  = 0.,
+ monitorFreq       = 60.,
+ forcing_In_AB     =.false.,
+ &
+# Gridding parameters
+ &PARM04
+ usingCurvilinearGrid = .TRUE.,
+ delZ = 
+     10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.00, 10.01,
+     10.03, 10.11, 10.32, 10.80, 11.76, 13.42, 16.04, 19.82, 
+     22.00, 22.00, 22.00, 22.00, 22.00, 22.00, 22.00, 22.00,
+     22.00, 22.00, 22.00, 22.00, 22.00,	22.00, 22.00, 22.00,
+     22.00, 22.00, 22.00, 22.00, 22.00,	22.00, 22.00, 22.00,
+     22.00, 22.00, 22.00, 22.00, 22.00, 30.00, 45.00, 62.72,
+     98.25, 99.25,100.01, 101.33,104.56,111.33,122.83,139.09,
+     158.94,180.83,203.55,226.50,249.50,272.50,295.50,318.50,
+     341.50,364.50,387.50,410.50,433.50,456.50,
+ & 
+# Input datasets
+ &PARM05
+ bathyFile='bathy_10c_smoothed4.ross', 
+ hydrogThetaFile='T_ross_ecco2_02012016_64.box',
+ hydrogSaltFile ='S_ross_ecco2_02012016_64.box',
+ uVelInitFile    = 'U_ross_ecco2_02012016_64.box',
+ vVelInitFile    = 'V_ross_ecco2_02012016_64.box',
+&

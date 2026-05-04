@@ -1,0 +1,12 @@
+
+ &GM_PARM01
+ GM_background_K=10.,
+ GM_taper_scheme='ldd97',
+ GM_Kmin_horiz=50.,
+ GM_Visbeck_alpha=0.07, 
+ GM_Visbeck_length=50.E3,
+ GM_Visbeck_depth=2000.,
+ GM_Visbeck_maxVal_K=300.,
+
+ &
+

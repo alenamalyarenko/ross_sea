@@ -1,3 +1,6 @@
 [submodule "MITgcm"]
 	path = MITgcm
 	url = https://github.com/MITgcm/MITgcm.git
+[submodule "MITgcm69k"]
+	path = MITgcm69k
+	url = https://github.com/MITgcm/MITgcm.git

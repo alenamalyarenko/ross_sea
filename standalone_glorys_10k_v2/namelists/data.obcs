@@ -1,0 +1,78 @@
+#
+# ***************
+# Open boundaries
+# ***************
+ &OBCS_PARM01
+ OB_Jnorth= 210*-1,
+ OB_Jsouth= 210*0,
+ OB_Iwest=  240*1,
+ OB_Ieast=  240*-1,
+#
+ useOrlanskiNorth=.FALSE.,
+ useOBCSsponge=.TRUE.,
+ useOBCSbalance=.TRUE.,
+ useOBCSprescribe=.TRUE.,
+ useOBCStides = .TRUE.
+#
+ OBCS_tidalPeriod  = 44714.16,43200.,45569.88,43081.92,
+                86164.2,92949.48,86637.24,96726.24,
+                1180295.64,2380716.,
+ OBN_vTidAmFile= 'OBNam.pst_64.v',
+ OBN_uTidAmFile= 'OBNam.pst_64.u',
+ OBN_vTidPhFile= 'OBNph.pst_64.v',
+ OBN_uTidPhFile= 'OBNph.pst_64.u',
+ 
+ OBE_vTidAmFile=  'OBEam.pst_64.v',
+ OBE_uTidAmFile=  'OBEam.pst_64.u',
+ OBE_vTidPhFile=  'OBEph.pst_64.v',
+ OBE_uTidPhFile=  'OBEph.pst_64.u',
+ 
+ OBW_vTidAmFile=  'OBWam.pst_64.v',
+ OBW_uTidAmFile=  'OBWam.pst_64.u',
+ OBW_vTidPhFile=  'OBWph.pst_64.v',
+ OBW_uTidPhFile=  'OBWph.pst_64.u',
+#
+ OBNsFile='OB_N_s_glorys_93_17_64.bin',
+ OBNtFile='OB_N_t_glorys_93_17_64.bin',
+ OBNuFile='OB_N_u_glorys_93_17_64.bin',
+ OBNvFile='OB_N_v_glorys_93_17_64.bin',
+ OBEsFile='OB_E_s_glorys_93_17_64.bin',
+ OBEtFile='OB_E_t_glorys_93_17_64.bin',
+ OBEuFile='OB_E_u_glorys_93_17_64.bin',
+ OBEvFile='OB_E_v_glorys_93_17_64.bin',
+ OBWsFile='OB_W_s_glorys_93_17_64.bin',
+ OBWtFile='OB_W_t_glorys_93_17_64.bin',
+ OBWuFile='OB_W_u_glorys_93_17_64.bin',
+ OBWvFile='OB_W_v_glorys_93_17_64.bin',
+#
+ OBNaFile=    'OB_N_a_glorys_93_17_64.bin',
+ OBNhFile=    'OB_N_h_glorys_93_17_64.bin',
+ OBNuiceFile='OB_N_uice_glorys_93_17_64.bin',
+ OBNviceFile='OB_N_vice_glorys_93_17_64.bin',
+ OBEaFile=    'OB_E_a_glorys_93_17_64.bin',
+ OBEhFile=    'OB_E_h_glorys_93_17_64.bin',
+ OBEuiceFile='OB_E_uice_glorys_93_17_64.bin',
+ OBEviceFile='OB_E_vice_glorys_93_17_64.bin',
+ OBWaFile=    'OB_W_a_glorys_93_17_64.bin',
+ OBWhFile=    'OB_W_h_glorys_93_17_64.bin',
+ OBWuiceFile='OB_W_uice_glorys_93_17_64.bin',
+ OBWviceFile='OB_W_vice_glorys_93_17_64.bin', 
+# 
+ &
+# *****************************************
+# Orlanski Boundary Condition Parameters.
+# *****************************************
+ &OBCS_PARM02
+# cvelTimeScale = 2000.,
+ &
+# *****************************************
+# Sponge Layer Parameters.
+# *****************************************
+ &OBCS_PARM03
+ Urelaxobcsinner=1296000.E0,
+ Urelaxobcsbound=43200.E0,
+ Vrelaxobcsinner=1296000.E0,
+ Vrelaxobcsbound=43200.E0,
+ spongeThickness=5,
+ &
+

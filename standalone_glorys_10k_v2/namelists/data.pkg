@@ -1,0 +1,15 @@
+# Packages
+ &PACKAGES
+ useEXF         = .TRUE.,
+ useKPP         = .TRUE.,
+ useGMREDI      = .TRUE.,
+ useCAL         = .TRUE.,
+ useOBCS        = .TRUE.,
+ useDiagnostics = .TRUE.,
+ useSeaice      = .TRUE.,
+ useShelfIce    = .TRUE.,
+ useIcefront    = .TRUE., 
+ useBBL         = .TRUE.,
+ useGGL90       = .FALSE.,
+ useFrazil      = .TRUE., 
+ &

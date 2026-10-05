@@ -1,0 +1,46 @@
+
+BBL  
+	8km setup from https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025MS005115
+GMREDI
+	8km setup from https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2025MS005115
+
+Diagnostocs
+	introduce subfolders
+	more files 
+	
+
+Icefront
+	depth = base;
+	length =1 everywhere (needs to more around Cape Crosier)
+	2 new files in grid64
+
+Seaice: 
+	no restoring under ice
+	default freezing point allows for colder waters
+	advection 77 
+	drag 0.001
+
+EXCH2 : NP 135 (down from 210)
+
+
+obcs - Changes names of tidal files
+       Relax time : 12 h, 30 days
+
+
+
+TODO: 
+icefront: add smaller ice shelves, east corner of DIT
+	
+
+
+shelfice - read up on new formulas 
+kpp - mixing in cavity is crap
+
+EXF - repeat forcing for spinup?
+EXF - runoff new options! 
+
+
+ptracers
+
+data: increase vertical resolution ? 
+

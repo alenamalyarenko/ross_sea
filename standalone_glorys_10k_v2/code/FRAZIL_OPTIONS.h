@@ -17,10 +17,10 @@ C Instead of moving the supercooling to the surface layer, just remove it comple
 #undef FRAZIL_ZAP
 
 C Don't do anything to supercooled water in cavities.
-#define FRAZIL_IGNORE_CAVITIES
+#undef FRAZIL_IGNORE_CAVITIES
 
 C Slow release of supercooled water in cavities (~seaicefrazil)
-#undef FRAZIL_SLOW_RISE
+#define FRAZIL_SLOW_RISE
 
 
 

@@ -35,7 +35,7 @@ c#define SEAICE_MULTICATEGORY
 
 C--   run with sea Ice Thickness Distribution (ITD);
 C     set number of categories (nITD) in SEAICE_SIZE.h
-#undef SEAICE_ITD
+#define SEAICE_ITD
 
 C--   Since the missing sublimation term is now included
 C     this flag is needed for backward compatibility
